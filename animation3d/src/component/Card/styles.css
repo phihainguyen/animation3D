@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Open+Sans:ital,wght@1,700;1,800&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	perspective: 1000px;
+}
+
+.container {
+	width: 50vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	transform-style: preserve-3d;
+	min-height: 80vh;
+	width: 35rem;
+	border-radius: 30px;
+	padding: 0rem 5rem;
+	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25), 0px 0px 50px rgba(0, 0, 0, 0.25);
+	background-color: rgb(255, 255, 255);
+}
+.sneaker {
+	min-height: 35vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.sneaker img {
+	width: 20rem;
+	z-index: 2;
+	transition: all 0.5s ease;
+}
+
+.circle {
+	width: 20rem;
+	height: 20rem;
+	background: linear-gradient(to right, rgba(212, 245, 66, 0.75), rgba(3, 233, 233, 0.75));
+	position: absolute;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.info h1 {
+	font-size: 3rem;
+	transition: all 0.75s ease-out;
+	font-family: 'Open Sans', sans-serif;
+	color: #264ca5;
+}
+
+.info h3 {
+	font-size: 1.7rem;
+	padding: 2rem 0rem;
+	color: #2c2c2c;
+	font-weight: lighter;
+	transition: all 0.75s ease-out;
+	font-family: 'Abel', sans-serif;
+}
+
+.sizes {
+	display: flex;
+	justify-content: space-between;
+	transition: all 0.75s ease-out;
+}
+
+.sizes button {
+	padding: 0.5rem 2rem;
+	background: none;
+	border: none;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	cursor: pointer;
+	font-weight: bold;
+	color: #2c2c2c;
+	transition: all 0.5s ease;
+}
+
+button.active {
+	background: #264ca5;
+	color: white;
+}
+
+.purchase {
+	margin-top: 5rem;
+}
+
+.purchase button {
+	width: 100%;
+	padding: 1rem 0rem;
+	background: #f5023a;
+	border: none;
+	color: white;
+	cursor: pointer;
+	border-radius: 30px;
+	transition: all 0.5s ease;
+	font-family: 'Abel', sans-serif;
+	font-weight: 600;
+	font-size: 1.3rem;
+	letter-spacing: 0.2rem;
+}

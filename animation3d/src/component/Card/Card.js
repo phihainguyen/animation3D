@@ -5,6 +5,7 @@ const Card = () => {
 	const [ axis, setAxis ] = useState('');
 	const [ transition, setTransition ] = useState('');
 	const [ translation, setTranslation ] = useState('');
+	const [ translationTitle, setTranslationTitle ] = useState('');
 	const [ translationDesc, setTranslationDesc ] = useState('');
 	const [ translationOther, setTranslationOther ] = useState('');
 	const mouseMove = (e) => {
@@ -18,6 +19,7 @@ const Card = () => {
 		setAxis('rotateY(0deg) rotateX(0deg)');
 		// const transition = ;
 		setTransition('all 0.5s ease');
+		setTranslationTitle('translateZ(0px) rotateZ(0deg)');
 		setTranslation('translateZ(0px)');
 		setTranslationDesc('translateZ(0px)');
 		setTranslationOther('translateZ(0px)');
@@ -25,6 +27,7 @@ const Card = () => {
 	const handleMouseEnter = () => {
 		// const transition = ;
 		setTransition('none');
+		setTranslationTitle('translateZ(200px) rotateZ(-20deg)');
 		setTranslation('translateZ(150px)');
 		setTranslationDesc('translateZ(130px)');
 		setTranslationOther('translateZ(50px)');
@@ -39,7 +42,7 @@ const Card = () => {
 			<div className="card" style={{ transform: axis, transition: transition }}>
 				<div className="sneaker">
 					<div className="circle" />
-					<img src={logo} style={{ transform: translation }} />
+					<img src={logo} style={{ transform: translationTitle }} />
 				</div>
 				<div className="info">
 					<h1 className="title" style={{ transform: translation }}>
